@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url("/assets/fonts/Cairo/Cairo-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/assets/fonts/Cairo/Cairo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("/assets/fonts/Cairo/Cairo-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("/assets/fonts/Cairo/Cairo-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("/assets/fonts/Cairo/Cairo-Bold.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 800;
+  src:
+  url("/assets/fonts/Cairo/Cairo-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/FontAwesome5/fa-brands-400.eot");
+  src: url("/assets/fonts/FontAwesome5/fa-brands-400.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/FontAwesome5/fa-brands-400.woff2") format("woff2"),
+    url("/assets/fonts/FontAwesome5/fa-brands-400.woff") format("woff"),
+    url("/assets/fonts/FontAwesome5/fa-brands-400.ttf") format("truetype"),
+    url("/assets/fonts/FontAwesome5/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/FontAwesome5/fa-light-300.eot");
+  src: url("/assets/fonts/FontAwesome5/fa-light-300.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/FontAwesome5/fa-light-300.woff2") format("woff2"),
+    url("/assets/fonts/FontAwesome5/fa-light-300.woff") format("woff"),
+    url("/assets/fonts/FontAwesome5/fa-light-300.ttf") format("truetype"),
+    url("/assets/fonts/FontAwesome5/fa-light-300.svg#fontawesome") format("svg");
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/FontAwesome5/fa-regular-400.eot");
+  src: url("/assets/fonts/FontAwesome5/fa-regular-400.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/FontAwesome5/fa-regular-400.woff2") format("woff2"),
+    url("/assets/fonts/FontAwesome5/fa-regular-400.woff") format("woff"),
+    url("/assets/fonts/FontAwesome5/fa-regular-400.ttf") format("truetype"),
+    url("/assets/fonts/FontAwesome5/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/assets/fonts/FontAwesome5/fa-solid-900.eot");
+  src: url("/assets/fonts/FontAwesome5/fa-solid-900.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/FontAwesome5/fa-solid-900.woff2") format("woff2"),
+    url("/assets/fonts/FontAwesome5/fa-solid-900.woff") format("woff"),
+    url("/assets/fonts/FontAwesome5/fa-solid-900.ttf") format("truetype"),
+    url("/assets/fonts/FontAwesome5/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+.font-awesome(@brands: false) {
+  & when(@brands = true) {
+    font-family: "Font Awesome 5 Brands";
+  }
+  & when(@brands = false) {
+    font-family: "Font Awesome 5 Pro";
+  }
+  font-weight: 900;
+}
+
+.mainFont(@font-weight: normal) {
+  font-family: "Cairo", "Helvetica", "Arial", sans-serif;
+  font-weight: @font-weight;
+}
+
+@font-face {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/icomoon/icomoon.eot');
+  src: url("/assets/fonts/icomoon/icomoon.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/icomoon/icomoon.woff") format("woff"),
+    url("/assets/fonts/icomoon/icomoon.ttf") format("truetype"),
+    url("/assets/fonts/icomoon/icomoon.svg#icomoon") format("svg");
+}

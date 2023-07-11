@@ -1,0 +1,201 @@
+html {
+  font-size: 14px;
+
+  &:lang(ar) {
+    body {
+      direction: rtl;
+    }
+  }
+}
+
+body {
+  position: relative;
+  margin: 0;
+  background: @tt-updated-black-color;
+  direction: ltr;
+  line-height: 1.5;
+
+  * {
+    color: @tt-white;
+    .mainFont(normal);
+  }
+
+  &.error-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+#app-wrapper {
+  display: block;
+  position: relative;
+  transition: opacity 0.2s ease-in-out, height 0s ease-in-out 0.2s;
+  height: 100%;
+  min-height: 100vh;
+  opacity: 1;
+  overflow: hidden;
+  padding: 0;
+  transition: margin-top 0.4s ease;
+
+  &.header-padding {
+    margin-top: @tt-header-height;
+
+    @media screen and (max-width: 1024px) {
+      margin-top: -4rem;
+    }
+  }
+}
+
+// Pagination
+.ngx-pagination .pagination-next a{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  color: @tt-grey !important;
+}
+.ngx-pagination .pagination-next.disabled{
+  display: flex;
+  align-items: center;
+}
+.ngx-pagination .pagination-next.disabled span{
+  color: @tt-grey !important;
+}
+
+.ngx-pagination .pagination-next a::after, .ngx-pagination .pagination-next.disabled::after {
+ content: "→" !important;
+ font-size: 2rem;
+
+}
+.ngx-pagination .pagination-next.disabled::after{
+  margin-bottom: 0.3rem !important;
+}
+.ngx-pagination .pagination-next a:lang(ar)::after, .ngx-pagination .pagination-next.disabled:lang(ar)::after {
+  content: "←" !important;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  margin-left: 0 !important;
+ }
+.pagination {
+  // display: flex;
+  // position: relative;
+  // left: 75%;
+  // top: 1em;
+
+  &.artist-page {
+    padding-top: 1rem;
+    position: unset;
+
+    ul {
+      display: flex;
+      gap: 10px;
+      height: 29px;
+      align-items: center;
+      li{
+        cursor:pointer;
+      }
+      li:not(:last-child,.current) {
+        background: @tt-new-grey;
+        
+
+        a {
+          text-align: center;
+
+          &:hover {
+            background: #303236;
+          }
+        }
+
+        &:hover {
+          background: #303236;
+        }
+      }
+    }
+  }
+
+  .page-item {
+    margin-right: 0.3em;
+    border: 1px solid @tt-new-grey;
+    width: 2em;
+    text-align: center;
+    height: 2em;
+    background-color: @tt-new-grey;
+    padding-top: 4px;
+  }
+
+  .active {
+    border: 1px solid @tt-primary-color;
+    background-color: @tt-primary-color;
+  }
+
+  li a {
+    text-decoration: none;
+  }
+
+  .next {
+    margin: 0.3em 1em;
+    .next-page {
+      font-size: 1em;
+      color: @tt-gray;
+      font-weight: 400;
+    }
+  }
+}
+
+.align-left {
+  text-align: left;
+  direction: ltr;
+}
+
+.align-right {
+  text-align: right;
+  direction: rtl;
+}
+
+.sp-heading3 {
+  font-size: 28px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.sp-heading {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: Cairo;
+  text-transform: capitalize;
+  max-width: 55rem;
+}
+
+.sp-subheading {
+  font-family: Cairo;
+  font-size: 18px;
+  margin-bottom: 24px;
+  padding: 0 10px;
+  width: 70%;
+}
+
+.join-us-share {
+  display: flex;
+  align-items: center;
+
+  a.span {
+    font-size: 16px;
+    font-family: Cairo;
+    color: @tt-wite-v2;
+  }
+
+  .option {
+    height: 44px;
+    width: 44px;
+    border: 2px solid #6c6f7a;
+    border-radius: 30px;
+    // font-size: 1.55em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin: 0 1.5rem;
+    background: #23272c;
+  }
+}

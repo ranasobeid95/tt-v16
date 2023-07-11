@@ -1,0 +1,1089 @@
+/*==================================== 
+    MAP-SELECT STYLING START
+======================================*/
+.mat-select {
+  color: @tt-black !important;
+  background: transparent !important;
+  border: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  .mat-select-trigger {
+    vertical-align: middle;
+    height: 100%;
+  }
+  &.mat-arrow-up {
+    .mat-select-arrow {
+      border-top: none;
+      border-bottom: 5px solid;
+    }
+  
+  }
+  &.form-control {
+    padding: 0 !important;
+    .mat-select-trigger {
+      padding: 0.375rem 0.75rem;
+      padding-left: 1.5rem;
+    }
+  }
+  .mat-select-value {
+    vertical-align: middle;
+    max-width: 100%;
+  }
+  
+  .mat-select-placeholder,
+  .mat-select-arrow {
+    color: @tt-border !important;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .mat-select-arrow {
+    margin: 0 7px;
+  }
+
+  &.drop-down-selection{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+ 
+
+    &:hover,&:focus{
+      .mat-select-placeholder,
+      .mat-select-arrow {
+        color: @tt-primary-color !important;
+        border-color: @tt-primary-color;
+      }
+    
+    }
+    &:focus{
+      & .mat-select-trigger{
+        color: @tt-primary-color !important;
+      }
+    }
+    & .mat-select-trigger{
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      width: 100%;
+          height: 24px;
+
+    }
+      
+  .mat-select-placeholder,
+  .mat-select-value-text {
+    color: @tt-white !important;
+    font-weight: 400;
+    font-size:1.285rem;
+    height: 24px;
+    display: block;
+  }
+  .mat-select-value {
+   
+    height: 24px;
+}
+  .mat-select-arrow-wrapper{
+    height: 24px;
+  }
+  .mat-select-arrow {
+    color: @tt-white !important;
+    font-weight: 400;
+    font-size:1.285rem;
+    margin: 0 7px;
+    border: solid  @tt-white;
+    border-width: 0 2.5px 2.5px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-left: 15px;
+
+
+    &:lang(ar){
+      margin-left: 0;
+      margin-right: 15px;
+    }
+
+
+  }
+  }
+}
+
+.select-channel {
+  cursor: pointer;
+  &:hover {
+    color: @tt-primary-color;
+    .settings::before {
+      color: @tt-primary-color;
+    }
+    & .mat-select {
+      & .mat-select-value-text span,
+      .mat-select-arrow {
+        color: @tt-primary-color !important;
+      }
+    }
+  }
+}
+.filter-input {
+  .mat-select {
+    .mat-select-trigger {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+  }
+}
+
+.mat-select-panel {
+  background: #303136;
+  color: #fff;
+  border-radius: 5px !important;
+
+  & .mat-option-text {
+    color: #fff;
+  }
+
+  & .mat-option.mat-selected:not(.mat-option-multiple) {
+    background: #202124;
+  }
+
+  &.channel-types {
+    transform: translate(-2rem, 2rem) !important;
+    width: 11rem;
+  }
+  &.select-options-song-table{
+    background: rgba(28, 28, 32, 0.99) !important;
+    color: #fff;
+    box-shadow: 0px 0px 10px #6C6F7A !important;
+    border-radius: 3px !important;
+    transform: translate(1rem, 2.5rem) !important;
+    &:lang(ar){
+      transform: translate(-1rem, 3rem) !important;
+    }
+    width: 11rem;
+    padding: 11px 0 11px 11px;
+    & .mat-option-text {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 400;
+  }
+  }
+
+
+  &.filter-by-country {
+    transform: translate(-0.1rem, 3rem) !important;
+    width: 6rem;
+  }
+  &.sort-artists {
+    transform: translate(0rem, 3rem) !important;
+    width: 6.25rem;
+  }
+
+  &.artist-page-dropdown {
+    background: #181b20;
+    & .mat-option.mat-selected:not(.mat-option-multiple) {
+      background: rgba(151, 151, 151, 0.1);
+    }
+    & .mat-option:focus:not(.mat-option-disabled),
+    & .mat-option:hover:not(.mat-option-disabled, .mat-selected) {
+      background: rgba(86, 96, 114, 0.1);
+    }
+  }
+}
+
+.mat-option-text {
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+/*==================================== 
+    MAP-SELECT STYLING END
+======================================*/
+
+/*==================================== 
+    MAP-DATEPICKER STYLING START
+======================================*/
+.mat-form-field {
+  width: 100%;
+  height: 100%;
+  &.form-control {
+    padding: 0 0.75rem 0 0;
+  }
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0px !important;
+  height: 100%;
+}
+
+.mat-form-field-flex {
+  height: 100%;
+  align-items: center;
+}
+
+.mat-form-field-infix {
+  padding: 0 !important;
+  border-top: 0 !important;
+  height: 100%;
+}
+
+.mat-form-field-underline,
+.mat-form-field-subscript-wrapper {
+  display: none;
+}
+
+.mat-form-field-label-wrapper {
+  display: none !important;
+}
+
+input.mat-input-element {
+  -webkit-appearance: textfield !important;
+  font-size: 1em;
+  &.form-control {
+    padding: 0.375rem 0.75rem;
+    padding-left: 1.5rem;
+  }
+  &.form-control.date-of-birth {
+    padding: 0;
+  }
+}
+
+.mat-form-field-hide-placeholder input.mat-input-element::placeholder {
+  color: @tt-border !important;
+  -webkit-text-fill-color: @tt-border !important;
+  transition: none;
+}
+.mat-form-field-hide-placeholder input.mat-input-element::-moz-placeholder {
+  color: @tt-border !important;
+  -webkit-text-fill-color: @tt-border !important;
+  transition: none;
+}
+.mat-form-field-hide-placeholder
+  input.mat-input-element::-webkit-input-placeholder {
+  color: @tt-border !important;
+  -webkit-text-fill-color: @tt-border !important;
+  transition: none;
+}
+.mat-form-field-hide-placeholder input.mat-input-element:-ms-input-placeholder {
+  color: @tt-border !important;
+  -webkit-text-fill-color: @tt-border !important;
+  transition: none;
+}
+.mat-form-field-hide-placeholder
+  input.mat-input-element::-ms-input-placeholder {
+  color: @tt-border !important;
+  -webkit-text-fill-color: @tt-border !important;
+  transition: none;
+}
+
+.mat-input-element::placeholder,
+.mat-input-element::-moz-placeholder,
+.mat-input-element::-webkit-input-placeholder,
+.mat-input-element:-ms-input-placeholder,
+.mat-input-element::-ms-input-placeholder {
+  color: @tt-border !important;
+  -webkit-text-fill-color: @tt-border !important;
+  transition: none;
+}
+
+.mat-datepicker-toggle {
+  margin: 0 0.6rem;
+  & .mat-icon-button {
+    width: auto;
+    height: auto;
+  }
+  & .mat-button-wrapper {
+    display: flex;
+    &::before {
+      content: "\e95b";
+      color: #fff;
+      font-family: "icomoon";
+      font-size: 1.7rem;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+}
+
+.mat-calendar,
+.mat-datepicker-content {
+  background: #303236;
+  width: 216px;
+  border-radius: 8px;
+  height: auto !important;
+}
+
+.dropdown:hover {
+  input {
+    color: @tt-primary-color;
+  }
+
+  & .mat-button-wrapper::before {
+    color: @tt-primary-color;
+  }
+}
+
+.mat-calendar {
+  transform: translateX(-3rem);
+}
+
+.mat-datepicker-content {
+  border-radius: 10px !important;
+
+  & .mat-calendar {
+    box-shadow: 0px 0px 10px #6c6f7a;
+  }
+
+  .mat-calendar-controls {
+    margin: 0 0 5% 0;
+    justify-content: space-between;
+  }
+
+  .mat-calendar-body-disabled
+    > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected) {
+    color: #6c6f7a;
+  }
+
+  .mat-calendar-spacer {
+    display: none;
+  }
+
+  .mat-calendar-body-label {
+    opacity: 0.54;
+  }
+
+  .mat-calendar-previous-button {
+    order: -1;
+  }
+
+  .mat-calendar-table-header,
+  .mat-calendar-body-label {
+    color: inherit;
+  }
+
+  // .mat-calendar-body tr:nth-child(1) .mat-calendar-body-label {
+  //   display: none;
+  // }
+
+  .mat-calendar-arrow {
+    border-top-color: #fff;
+  }
+  .mat-calendar-body-selected {
+    background: #00b5ff;
+    border: none;
+    box-shadow: none;
+    font-weight: 700;
+  }
+
+  .mat-button-wrapper {
+    font-weight: 700;
+  }
+
+  .mat-calendar-body-cell-content {
+    font-size: 11px;
+  }
+  .mat-calendar-previous-button,
+  .mat-calendar-next-button,
+  .mat-calendar-body-cell-content {
+    color: #fff;
+  }
+}
+
+.mat-form-field-suffix {
+  margin: auto 0;
+}
+
+.mat-calendar-previous-button,
+.mat-calendar-next-button {
+  opacity: 0.54;
+  &:disabled {
+    opacity: 0.26;
+  }
+}
+
+.mat-calendar-table-header {
+  opacity: 0.38;
+  tr,
+  th {
+    color: inherit;
+  }
+}
+
+.mat-calendar-body-selected {
+  // background-color: @tt-border;
+  color: @tt-white !important;
+}
+/*==================================== 
+    MAP-DATEPICKER STYLING END
+======================================*/
+
+/*==================================== 
+    MAP-CHECKBOX STYLING START
+======================================*/
+.mat-checkbox {
+  &.mat-checkbox-disabled {
+    & .mat-checkbox-inner-container {
+      cursor: not-allowed !important;
+    }
+    & .radio-btn-content p {
+      text-transform: none;
+    }
+  }
+  &.form-control {
+    border: none;
+    padding: 0;
+    text-align: center;
+    cursor: default;
+    .mat-checkbox-inner-container {
+      border: none;
+      .mat-checkbox-frame {
+        border: 2px solid #6c6f7a;
+        border-radius: 2px;
+      }
+
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      margin-left: 0;
+      input[disabled] {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+.mat-checkbox-layout {
+  height: 100%;
+}
+
+.mat-checkbox-label {
+  margin: auto;
+  cursor: default;
+}
+
+.mat-checkbox-inner-container {
+  border: 1px solid @tt-border;
+  width: 20px;
+  height: 20px;
+}
+
+.mat-datepicker-toggle-default-icon {
+  width: 1.4rem !important;
+}
+
+/*==================================== 
+    MAP-CHECKBOX STYLING END
+======================================*/
+
+/*==================================== 
+    INTERNATIONAL PHONE NUMBER STYLING START
+======================================*/
+.iti {
+  &:not(.iti-container) {
+    // width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .iti__country-list {
+    background-color: @tt-black;
+    overflow-x: hidden;
+    .iti__country {
+      &.iti__highlight {
+        background-color: @tt-button-disabled;
+      }
+    }
+  }
+  &.iti--separate-dial-code {
+    z-index: 2;
+    // width: 100%;
+  }
+  .form-control {
+    width: 100%;
+    height: 100%;
+  }
+  .iti__selected-flag {
+    .iti__arrow {
+      right: auto;
+      left: 0;
+      border-top-color: @tt-white;
+    }
+  }
+  .iti--selected-dial-code {
+    padding-left: 30px;
+  }
+}
+
+.iti__flag-container {
+  direction: ltr !important;
+}
+.isDisabled:hover {
+  cursor: default !important;
+}
+
+.support-content .phones {
+  .iti:not(.iti-container) {
+    height: auto;
+    position: relative;
+    display: flex;
+    // width: 165px;
+  }
+
+  .iti__flag-container {
+    position: relative;
+    direction: initial;
+  }
+  .isDisabled {
+    cursor: default !important;
+  }
+
+  .local-num {
+    padding-right: 0;
+  }
+}
+
+.forgot-pass-form .iti {
+  .iti__country-list {
+    max-height: 125px;
+  }
+}
+
+.change-phone,
+.whatsApp-number .iti__country-list {
+  max-height: 155px;
+}
+/*==================================== 
+    INTERNATIONAL PHONE NUMBER STYLING END
+======================================*/
+
+/*==================================== 
+    DOM ELEMENTS RESET START
+======================================*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  box-shadow: 0 0 0 30px @tt-black inset;
+  -webkit-text-fill-color: @tt-white !important;
+}
+
+button:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+label,
+p {
+  margin: 0px;
+  font-size: 1em;
+}
+
+*:focus {
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#loading-bar-spinner {
+  top: ~"calc((" @tt-header-height ~"- 14px) / 2)" !important;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+html,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+  display: none !important;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-size: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+  border: 0; /* 1 */
+  -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0;
+  white-space: normal; /* 2 */
+  *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%; /* 1 */
+  margin: 0; /* 2 */
+  vertical-align: baseline; /* 3 */
+  *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+  *overflow: visible; /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+  *height: 13px; /* 3 */
+  *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ * 3. Disable resize
+ */
+
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+  resize: none; /* 3 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+app-email-phone-input {
+  .form-group,
+  .tt-form-group {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+.asia-hawala {
+  .iti--separate-dial-code .iti__selected-flag {
+    background-color: transparent;
+  }
+
+  .iti--separate-dial-code .iti__selected-dial-code {
+    margin: 0 0.5em;
+  }
+}
+
+.recaptcha {
+  margin-bottom: 15px;
+  min-height: 78px;
+}
+
+/*==================================== 
+    DOM ELEMENTS RESET END
+======================================*/

@@ -1,0 +1,119 @@
+
+.nav-item {
+  .sub-menu {
+    // top: calc(@tt-button-height - 10px);
+    // width: 144px;
+    left: 0;
+    text-transform: capitalize;
+  }
+  &:hover {
+    .sub-menu {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.anonymous-user-menu,
+.sub-menu,
+.user-menu {
+  // position: absolute;
+  // top: 125%;
+  // right: -100%;
+  // min-width: 20rem;
+  // padding: 1.5rem 2rem;
+  // background: linear-gradient(180deg, #1f2226 0%, #161a1e 100%);
+  position: absolute;
+  top: calc(@tt-header-height - 20px);
+  width: 144px;
+  // padding: 12px 4px;
+  background: #303236;
+  border-radius: 8px;
+  box-shadow: #00000099 0px 0px 7px 2px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  transform: translateY(-5%);
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  li {
+    // margin-bottom: 0.5rem;
+    transition: color 0.35s ease-in-out;
+    color: #f4f4f4;
+    padding: 5px 16px;
+
+    .tt-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-icon {
+      font-family: "icomoon";
+      color: #6c6f7a;
+    }
+
+    .icomoon-icon {
+      font-family: "icomoon";
+      color: #6c6f7a;
+      font-size: 24px;
+    }
+
+    .video-settings::before {
+      content: "\e94b";
+    }
+
+    .new-account::after {
+      content: "\e914";
+    }
+
+    .login {
+      transform: rotatey(180deg);
+      &::after {
+        content: "\e91a";
+      }
+    }
+
+    &:hover {
+      a > * {
+        color: @tt-primary-color;
+      }
+    }
+  }
+}
+
+.user-menu{
+  width: 240px;
+  text-decoration: none;
+  ul{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  li{
+    padding: 5px 16px;
+  }
+}
+
+.anonymous-user-menu{
+  width: 200px;
+  ul{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  li{
+    padding: 5px 16px;
+  }
+}
+
+.user-menu, .anonymous-user-menu, .nav-item .languages-menu{
+  right: 0;
+  left: auto;
+}

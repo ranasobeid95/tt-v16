@@ -1,0 +1,209 @@
+.mat-slide-toggle-thumb {
+    background-color: white !important;
+    height: 28px !important;
+    width: 28px !important;
+  }
+  
+  .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: @tt-primary-color !important;
+    border: 1.5px solid @tt-primary-color !important;
+    .mat-slide-toggle-thumb-container {
+      left: 4px !important;
+    }
+  }
+  
+  .mat-slide-toggle-bar {
+    width: 50px !important;
+    height: 30px !important;
+    border-radius: 15.5px !important;
+    border: 1.5px solid #999999 !important;
+  }
+  .mat-slide-toggle-thumb-container {
+    top: 0px !important;
+    left: 0px !important;
+  }
+  .mat-slide-toggle {
+    -webkit-tap-highlight-color:#00b5ff2b !important
+    
+    // display: none !important;
+  }
+  .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #ffffff !important;
+}
+  
+  .mat-slide-toggle.mat-checked .mat-ripple-element{
+    background-color:  @tt-primary-color !important;
+  }
+  .cdk-overlay-pane.mat-datepicker-popup.tv-guide-datepicker{
+    top: 230px !important;
+    left: 247px !important;
+
+    &:lang(ar){
+      right: 231px !important;
+      left: auto !important;
+    }
+  }
+
+  
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple{
+    background-color: transparent !important;
+  }
+
+  /* Animate items as they're being sorted. */
+.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drop-list{
+  width: 100%;
+}
+
+.cdk-drag-placeholder{
+  width: 100%;
+  opacity: 0;
+}
+
+.cdk-drag-preview{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  td{
+    padding: 1rem;
+  }
+  td:not(:nth-child(1)) {
+    color: @tt-wite-v2;
+    width: 29%;
+  }
+
+  a.artist {
+    display: inline;
+  }
+
+  .song-column {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    .img {
+      width: 50px;
+      height: 50px;
+      background: url("../../assets/images/placeholder_music.png");
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+
+      & .thumbnail {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+    min-width: 10rem;
+    .watch-video,
+    .listen-audio {
+      margin: 0 1.5rem;
+      font-family: "icomoon";
+      font-size: 1.7rem;
+      color: @tt-secondary-2;
+      transition: color .3s ease-in-out;
+      cursor: pointer;
+      
+      &:hover{
+        &::before{
+          color: @tt-primary-color;
+        }
+      }
+    }
+
+    .watch-video{
+      &::before{
+        content: "\e938"
+      }
+    }
+
+    .listen-audio{
+      &::before{
+        content: "\e937";
+      }
+    }
+  }
+
+  .icomoon-icon {
+    font-family: "icomoon";
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  .add-favorite,
+  .remove-favorite {
+    font-size: 1.6rem;
+    &::before {
+      content: "\e959";
+    }
+  }
+
+  .remove-favorite{
+    &::before{
+      color: @primary-color-contrast;
+    }
+  }
+
+  .drag-handle {
+    margin-right: 4px;
+    &::before{
+      content: "\e95f";
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+
+  .action-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .paid {
+    height: 1.7rem;
+    margin: 0 10px;
+  }
+
+  .elipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 360px;
+  }
+  
+  .elipsis.song{
+    max-width: 300px;
+  }
+
+  .song{
+    display: inline-block;
+    margin-bottom: -0.5rem;
+  }
+}

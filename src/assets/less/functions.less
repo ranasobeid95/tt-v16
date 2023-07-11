@@ -1,0 +1,55 @@
+.vertical-center-transform( @offset: 0px ) {
+  position: absolute;
+  top: ~'calc((100% + (' @offset ~')) /2)';
+  transform: translateY(-50%);
+}
+
+.horizontal-center-transform( @offset: 0px ) {
+  position: absolute;
+  left: ~'calc((100% + (' @offset ~')) /2)';
+  transform: translateX(-50%);
+}
+
+.center-transform() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-container( @justify-content: flex-start ) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: @justify-content;
+}
+
+.animation( @animation-name: none, @duration: 0.2s, @timing-function: ease, @delay: infinite, @fill-mode: none ) {
+  -webkit-animation: @animation-name @duration @timing-function @delay
+    @fill-mode;
+  -moz-animation: @animation-name @duration @timing-function @delay @fill-mode;
+  -ms-animation: @animation-name @duration @timing-function @delay @fill-mode;
+  -o-animation: @animation-name @duration @timing-function @delay @fill-mode;
+  animation: @animation-name @duration @timing-function @delay @fill-mode;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
