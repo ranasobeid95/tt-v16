@@ -1,0 +1,20 @@
+{
+  "/proxy": {
+    "target": "https://awsstatic01.mifteam.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/securedapp/api/*": {
+    "target": "https://awsstatic01.mifteam.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/musicsecuredapp/api/*": {
+    "target": "https://awsstatic01.mifteam.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "/proxy": {
+    "target": "https://tentime.com",
+    "secure": false,
+    "logLevel": "silent",
+    "changeOrigin": true
+  },
+  "/securedapp/api/*": {
+    "target": "https://tentime.com",
+    "secure": false,
+    "logLevel": "silent",
+    "changeOrigin": true
+  },
+  "/musicsecuredapp/api/*": {
+    "target": "https://tentime.com",
+    "secure": false,
+    "logLevel": "silent",
+    "changeOrigin": true
+  }
+}

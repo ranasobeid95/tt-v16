@@ -1,0 +1,20 @@
+{
+  "/proxy": {
+    "target": "http://ec2-35-157-82-173.eu-central-1.compute.amazonaws.com:5000",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/securedapp/api/*": {
+    "target": "https://testing.mifteam.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/musicsecuredapp/api/*": {
+    "target": "https://testing.mifteam.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

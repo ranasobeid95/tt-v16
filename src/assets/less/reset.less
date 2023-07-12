@@ -7,114 +7,131 @@
   border: 0;
   padding-top: 0px;
   padding-bottom: 0px;
+
   .mat-select-trigger {
     vertical-align: middle;
     height: 100%;
   }
+
   &.mat-arrow-up {
     .mat-select-arrow {
       border-top: none;
       border-bottom: 5px solid;
     }
-  
+
   }
+
   &.form-control {
     padding: 0 !important;
+
     .mat-select-trigger {
       padding: 0.375rem 0.75rem;
       padding-left: 1.5rem;
     }
   }
+
   .mat-select-value {
     vertical-align: middle;
     max-width: 100%;
   }
-  
+
   .mat-select-placeholder,
   .mat-select-arrow {
     color: @tt-border !important;
     font-weight: 700;
     font-size: 14px;
   }
+
   .mat-select-arrow {
     margin: 0 7px;
   }
 
-  &.drop-down-selection{
+  &.drop-down-selection {
     display: flex;
     cursor: pointer;
     align-items: center;
- 
 
-    &:hover,&:focus{
+
+    &:hover,
+    &:focus {
+
       .mat-select-placeholder,
       .mat-select-arrow {
         color: @tt-primary-color !important;
         border-color: @tt-primary-color;
       }
-    
+
     }
-    &:focus{
-      & .mat-select-trigger{
+
+    &:focus {
+      & .mat-select-trigger {
         color: @tt-primary-color !important;
       }
     }
-    & .mat-select-trigger{
+
+    & .mat-select-trigger {
       display: flex;
       align-items: center;
       gap: 11px;
       width: 100%;
-          height: 24px;
+      height: 24px;
 
     }
-      
-  .mat-select-placeholder,
-  .mat-select-value-text {
-    color: @tt-white !important;
-    font-weight: 400;
-    font-size:1.285rem;
-    height: 24px;
-    display: block;
-  }
-  .mat-select-value {
-   
-    height: 24px;
-}
-  .mat-select-arrow-wrapper{
-    height: 24px;
-  }
-  .mat-select-arrow {
-    color: @tt-white !important;
-    font-weight: 400;
-    font-size:1.285rem;
-    margin: 0 7px;
-    border: solid  @tt-white;
-    border-width: 0 2.5px 2.5px 0;
-    display: inline-block;
-    padding: 4px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    margin-left: 15px;
 
-
-    &:lang(ar){
-      margin-left: 0;
-      margin-right: 15px;
+    .mat-select-placeholder,
+    .mat-select-value-text {
+      color: @tt-white !important;
+      font-weight: 400;
+      font-size: 1.285rem;
+      height: 24px;
+      display: block;
     }
 
+    .mat-select-value {
 
-  }
+      height: 24px;
+    }
+
+    .mat-select-arrow-wrapper {
+      height: 24px;
+    }
+
+    .mat-select-arrow {
+      color: @tt-white !important;
+      font-weight: 400;
+      font-size: 1.285rem;
+      margin: 0 7px;
+      border: solid @tt-white;
+      border-width: 0 2.5px 2.5px 0;
+      display: inline-block;
+      padding: 4px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      margin-left: 15px;
+
+
+      // &:lang(ar){
+      //   margin-left: 0;
+      //   margin-right: 15px;
+      // }
+
+
+    }
   }
 }
 
 .select-channel {
   cursor: pointer;
+
   &:hover {
     color: @tt-primary-color;
+
     .settings::before {
       color: @tt-primary-color;
     }
+
     & .mat-select {
+
       & .mat-select-value-text span,
       .mat-select-arrow {
         color: @tt-primary-color !important;
@@ -122,6 +139,7 @@
     }
   }
 }
+
 .filter-input {
   .mat-select {
     .mat-select-trigger {
@@ -149,22 +167,24 @@
     transform: translate(-2rem, 2rem) !important;
     width: 11rem;
   }
-  &.select-options-song-table{
+
+  &.select-options-song-table {
     background: rgba(28, 28, 32, 0.99) !important;
     color: #fff;
     box-shadow: 0px 0px 10px #6C6F7A !important;
     border-radius: 3px !important;
     transform: translate(1rem, 2.5rem) !important;
-    &:lang(ar){
-      transform: translate(-1rem, 3rem) !important;
-    }
+    // &:lang(ar){
+    //   transform: translate(-1rem, 3rem) !important;
+    // }
     width: 11rem;
     padding: 11px 0 11px 11px;
+
     & .mat-option-text {
       color: #fff;
       font-size: 17px;
       font-weight: 400;
-  }
+    }
   }
 
 
@@ -172,6 +192,7 @@
     transform: translate(-0.1rem, 3rem) !important;
     width: 6rem;
   }
+
   &.sort-artists {
     transform: translate(0rem, 3rem) !important;
     width: 6.25rem;
@@ -179,9 +200,11 @@
 
   &.artist-page-dropdown {
     background: #181b20;
+
     & .mat-option.mat-selected:not(.mat-option-multiple) {
       background: rgba(151, 151, 151, 0.1);
     }
+
     & .mat-option:focus:not(.mat-option-disabled),
     & .mat-option:hover:not(.mat-option-disabled, .mat-selected) {
       background: rgba(86, 96, 114, 0.1);
@@ -205,6 +228,7 @@
 .mat-form-field {
   width: 100%;
   height: 100%;
+
   &.form-control {
     padding: 0 0.75rem 0 0;
   }
@@ -238,10 +262,12 @@
 input.mat-input-element {
   -webkit-appearance: textfield !important;
   font-size: 1em;
+
   &.form-control {
     padding: 0.375rem 0.75rem;
     padding-left: 1.5rem;
   }
+
   &.form-control.date-of-birth {
     padding: 0;
   }
@@ -252,24 +278,26 @@ input.mat-input-element {
   -webkit-text-fill-color: @tt-border !important;
   transition: none;
 }
+
 .mat-form-field-hide-placeholder input.mat-input-element::-moz-placeholder {
   color: @tt-border !important;
   -webkit-text-fill-color: @tt-border !important;
   transition: none;
 }
-.mat-form-field-hide-placeholder
-  input.mat-input-element::-webkit-input-placeholder {
+
+.mat-form-field-hide-placeholder input.mat-input-element::-webkit-input-placeholder {
   color: @tt-border !important;
   -webkit-text-fill-color: @tt-border !important;
   transition: none;
 }
+
 .mat-form-field-hide-placeholder input.mat-input-element:-ms-input-placeholder {
   color: @tt-border !important;
   -webkit-text-fill-color: @tt-border !important;
   transition: none;
 }
-.mat-form-field-hide-placeholder
-  input.mat-input-element::-ms-input-placeholder {
+
+.mat-form-field-hide-placeholder input.mat-input-element::-ms-input-placeholder {
   color: @tt-border !important;
   -webkit-text-fill-color: @tt-border !important;
   transition: none;
@@ -287,12 +315,15 @@ input.mat-input-element {
 
 .mat-datepicker-toggle {
   margin: 0 0.6rem;
+
   & .mat-icon-button {
     width: auto;
     height: auto;
   }
+
   & .mat-button-wrapper {
     display: flex;
+
     &::before {
       content: "\e95b";
       color: #fff;
@@ -340,8 +371,7 @@ input.mat-input-element {
     justify-content: space-between;
   }
 
-  .mat-calendar-body-disabled
-    > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected) {
+  .mat-calendar-body-disabled>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected) {
     color: #6c6f7a;
   }
 
@@ -369,6 +399,7 @@ input.mat-input-element {
   .mat-calendar-arrow {
     border-top-color: #fff;
   }
+
   .mat-calendar-body-selected {
     background: #00b5ff;
     border: none;
@@ -383,6 +414,7 @@ input.mat-input-element {
   .mat-calendar-body-cell-content {
     font-size: 11px;
   }
+
   .mat-calendar-previous-button,
   .mat-calendar-next-button,
   .mat-calendar-body-cell-content {
@@ -397,6 +429,7 @@ input.mat-input-element {
 .mat-calendar-previous-button,
 .mat-calendar-next-button {
   opacity: 0.54;
+
   &:disabled {
     opacity: 0.26;
   }
@@ -404,6 +437,7 @@ input.mat-input-element {
 
 .mat-calendar-table-header {
   opacity: 0.38;
+
   tr,
   th {
     color: inherit;
@@ -414,6 +448,7 @@ input.mat-input-element {
   // background-color: @tt-border;
   color: @tt-white !important;
 }
+
 /*==================================== 
     MAP-DATEPICKER STYLING END
 ======================================*/
@@ -426,17 +461,21 @@ input.mat-input-element {
     & .mat-checkbox-inner-container {
       cursor: not-allowed !important;
     }
+
     & .radio-btn-content p {
       text-transform: none;
     }
   }
+
   &.form-control {
     border: none;
     padding: 0;
     text-align: center;
     cursor: default;
+
     .mat-checkbox-inner-container {
       border: none;
+
       .mat-checkbox-frame {
         border: 2px solid #6c6f7a;
         border-radius: 2px;
@@ -446,12 +485,14 @@ input.mat-input-element {
       height: 20px;
       cursor: pointer;
       margin-left: 0;
+
       input[disabled] {
         cursor: not-allowed;
       }
     }
   }
 }
+
 .mat-checkbox-layout {
   height: 100%;
 }
@@ -484,23 +525,28 @@ input.mat-input-element {
     height: 100%;
     position: absolute;
   }
+
   .iti__country-list {
     background-color: @tt-black;
     overflow-x: hidden;
+
     .iti__country {
       &.iti__highlight {
         background-color: @tt-button-disabled;
       }
     }
   }
+
   &.iti--separate-dial-code {
     z-index: 2;
     // width: 100%;
   }
+
   .form-control {
     width: 100%;
     height: 100%;
   }
+
   .iti__selected-flag {
     .iti__arrow {
       right: auto;
@@ -508,6 +554,7 @@ input.mat-input-element {
       border-top-color: @tt-white;
     }
   }
+
   .iti--selected-dial-code {
     padding-left: 30px;
   }
@@ -516,6 +563,7 @@ input.mat-input-element {
 .iti__flag-container {
   direction: ltr !important;
 }
+
 .isDisabled:hover {
   cursor: default !important;
 }
@@ -532,6 +580,7 @@ input.mat-input-element {
     position: relative;
     direction: initial;
   }
+
   .isDisabled {
     cursor: default !important;
   }
@@ -551,6 +600,7 @@ input.mat-input-element {
 .whatsApp-number .iti__country-list {
   max-height: 155px;
 }
+
 /*==================================== 
     INTERNATIONAL PHONE NUMBER STYLING END
 ======================================*/
@@ -603,7 +653,7 @@ ul {
 }
 
 #loading-bar-spinner {
-  top: ~"calc((" @tt-header-height ~"- 14px) / 2)" !important;
+  top: ~"calc(("@tt-header-height ~"- 14px) / 2)" !important;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -777,8 +827,8 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
+  display: inline;
+  zoom: 1;
   max-width: 100%;
 }
 
@@ -809,9 +859,12 @@ audio:not([controls]) {
  */
 
 html {
-  font-size: 100%; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  -ms-text-size-adjust: 100%; /* 2 */
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
 }
 
 /**
@@ -837,8 +890,10 @@ a:hover {
  */
 
 img {
-  border: 0; /* 1 */
-  -ms-interpolation-mode: bicubic; /* 2 */
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
 }
 
 /**
@@ -874,10 +929,13 @@ fieldset {
  */
 
 legend {
-  border: 0; /* 1 */
+  border: 0;
+  /* 1 */
   padding: 0;
-  white-space: normal; /* 2 */
-  *margin-left: -7px; /* 3 */
+  white-space: normal;
+  /* 2 */
+  margin-left: -7px;
+  /* 3 */
 }
 
 /**
@@ -891,10 +949,14 @@ button,
 input,
 select,
 textarea {
-  font-size: 100%; /* 1 */
-  margin: 0; /* 2 */
-  vertical-align: baseline; /* 3 */
-  *vertical-align: middle; /* 3 */
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  vertical-align: middle;
+  /* 3 */
 }
 
 /**
@@ -930,12 +992,16 @@ select {
  */
 
 button,
-html input[type="button"], /* 1 */
+html input[type="button"],
+/* 1 */
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-  *overflow: visible; /* 4 */
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  overflow: visible;
+  /* 4 */
 }
 
 /**
@@ -956,10 +1022,14 @@ html input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-  *height: 13px; /* 3 */
-  *width: 13px; /* 3 */
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  height: 13px;
+  /* 3 */
+  width: 13px;
+  /* 3 */
 }
 
 /**
@@ -969,9 +1039,11 @@ input[type="radio"] {
  */
 
 input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
+  -webkit-appearance: textfield;
+  /* 1 */
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box; /* 2 */
+  -webkit-box-sizing: content-box;
+  /* 2 */
   box-sizing: content-box;
 }
 
@@ -1002,9 +1074,12 @@ input::-moz-focus-inner {
  */
 
 textarea {
-  overflow: auto; /* 1 */
-  vertical-align: top; /* 2 */
-  resize: none; /* 3 */
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+  resize: none;
+  /* 3 */
 }
 
 /**
@@ -1062,6 +1137,7 @@ textarea {
 }
 
 app-email-phone-input {
+
   .form-group,
   .tt-form-group {
     margin: 0 !important;
