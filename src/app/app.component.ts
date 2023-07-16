@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {  RouterOutlet } from '@angular/router';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SigninComponent } from './signin/signin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DataAuthService } from './services/auth.service';
 
 
 @Component({
@@ -12,6 +13,12 @@ import { HttpClientModule } from '@angular/common/http';
   standalone:true,
   imports:[RouterOutlet,MatDialogModule,SigninComponent,HttpClientModule]
 })
-export class AppComponent {
-  title = 'tt-v16';
+export class AppComponent implements OnInit{
+  constructor(
+    private _authService:DataAuthService,
+  ) {}
+
+  ngOnInit() {
+    this._authService.authenticate().subscribe();
+  }
 }

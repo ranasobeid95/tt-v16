@@ -9,145 +9,19 @@
       lang="ar"
       content="أكبر منصة متميزة من قلب الوطن العربي. انتاجات مدبلجة وحصرية باللغة العربية وباقة ضخمة من الأغاني وأفضل قنوات البث المباشر. انتاجات حصرية سيتم اطلاقها قريباً"
     />
-    <meta property="fb:app_id" content="536887273801770" />
-    <meta property="al:android:package" content="com.tentimelimited.ios" />
-    <meta property="al:android:app_name" content="Tentime" />
-    <meta property="al:android:url" content="https://tentime.com/browse/" />
-    <meta property="al:web:should_fallback" content="true" />
-    <meta property="al:web:url" content="https://tentime.com/" />
-
-    <meta property="og:url" content="$URL" />
-    <meta property="og:title" content="$TITLE" />
-    <meta property="og:description" content="$DESCRIPTION" />
-    <meta property="og:image" content="$IMAGE2" />
-    <meta name="facebook-domain-verification" content="$DOMAINID" />
-    <meta
-      name="google-site-verification"
-      content="fxkNsjtSDlh8ZvJ9n6R06mF3ATgHMOZqG9w5_WafBQI"
-    />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-WS86ZSH");
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <script>
-      var redirectToApp = function () {
-        const userAgent =
-          navigator.userAgent || navigator.vendor || window.opera;
-        const ios = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
-        const android = /android/i.test(userAgent);
-        const storeIOS = "https://apps.apple.com/us/app/tentime/id1458611147";
-        const storeAndroid =
-          "https://play.google.com/store/apps/details?id=com.tentimelimited.ios&hl=en&gl=US";
-
-        const params = new URLSearchParams(window.location.search);
-        const pathname = params.get("redirectTo");
-        let alternateUrlTarget;
-        if (pathname) {
-          alternateUrlTarget = "tentime:/" + "/web" + JSON.parse(pathname);
-        }
-        if ((ios || android) && alternateUrlTarget) {
-          window.location.href = alternateUrlTarget;
-          setTimeout(() => {
-            window.close();
-            window.location.href = ios ? storeIOS : storeAndroid;
-          }, 250);
-        }
-      };
-
-      window.onload = redirectToApp;
-    </script>
-
-    <!-- Google Cast script -->
-    <script>
-      window["__onGCastApiAvailable"] = function (isAvailable) {
-        if (isAvailable) {
-          initializeCastApi();
-        }
-      };
-      initializeCastApi = function () {
-        cast.framework.CastContext.getInstance().setOptions({
-          receiverApplicationId: "2F7B1DC8",
-          autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED,
-        });
-      };
-    </script>
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"
-    ></script>
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", $BUSINESSID);
-      fbq("track", "PageView");
-    </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=$BUSINESSID&ev=PageView&noscript=1"
-    /></noscript>
+ 
     <!-- End Meta Pixel Code -->
     <title>TenTime</title>
     <base href="/" />
 
-    <link rel="icon" type="image/x-icon" href="./assets/tt-icon.ico" />
-    <script src="./assets/js/forge/forge.min.js"></script>
     <script defer src="https://cdn.checkout.com/js/framesv2.min.js"></script>
   </head>
 
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript id="noscript"></noscript>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-WS86ZSH"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
-    <!-- End Google Tag Manager (noscript) -->
     <app-root></app-root>
-    <noscript
-      >Please enable JavaScript to continue using this application.</noscript
-    >
+  
   </body>
 </html>

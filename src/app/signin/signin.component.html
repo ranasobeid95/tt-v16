@@ -1,1 +1,52 @@
-<p>signin works!</p>
+<div class="login-form" >
+    <div>
+        <h1>Login to TenTime</h1>
+    </div>
+    <form #form="ngForm" (ngSubmit)="onSubmit($event, form)">
+      <h4>Please enter your account info</h4>
+      <div class="tt-form-group">
+        <input
+        #inEmail="ngModel"
+        #email
+        type="text"
+        id="emailOrPhoneNumber"
+        name="emailOrPhoneNumber"
+        placeholder="Email"
+        class="tt-form-control"
+        [(ngModel)]="authForm.emailOrPhoneNumber"
+        required
+      />
+      </div>
+      <div class="tt-form-group password">
+        <input
+          #inPass="ngModel"
+          #pass
+          type="password"
+          id="signInPassword"
+          name="password"
+          placeholder="Password"
+          class="tt-form-control"
+          [(ngModel)]="authForm.password"
+          tabindex="0"
+          required
+          minlength="6"
+        />
+        <span
+          class="eye {{ isPassword(pass) ? '' : 'fill' }}"
+          (click)="changePasswordType(pass)"
+        ></span>
+      </div>
+
+      <div class="tt-dialog-actions no-margin">
+  
+        <button
+          [disabled]="form.invalid || submittingForm"
+          type="submit"
+          class="primary"
+          tabindex="0"
+        >
+         Login 
+        </button>
+      </div>
+    </form>
+  </div>

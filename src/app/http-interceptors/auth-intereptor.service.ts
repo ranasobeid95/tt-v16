@@ -12,7 +12,6 @@ import { DataAuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { isPlatformBrowser } from '@angular/common';
-import { LoggingService } from '../services/logging.service';
 
 @Injectable({
   providedIn: 'root'
@@ -122,16 +121,16 @@ export class AuthInterceptorService implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<any> {
     // Handle request
-    if (request.url !== LoggingService.SLACK_WEB_HOOK) {
+ 
       request = this.addAuthHeader(request);
-    } else {
+
       request = request.clone({
         headers: new HttpHeaders().set(
           'Content-Type',
           'application/x-www-form-urlencoded'
         )
       });
-    }
+    
     // First Load of the website
     if (
       !request.headers.get('Authorization') &&
