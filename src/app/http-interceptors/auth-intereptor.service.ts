@@ -26,12 +26,15 @@ export class AuthInterceptorService implements HttpInterceptor {
   private authHeader!: string|null;
   private tkHeader!: string| null;
   private earthLink = 'https://tvapi.shabakaty.com/health/';
+  platformId:Object;
 
   constructor(
     private _authService: DataAuthService,
     private _router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+    @Inject(PLATFORM_ID) platformId: Object
+  ) {
+    this.platformId = platformId;
+  }
 
   addAuthHeader(request: HttpRequest<any>) {
 

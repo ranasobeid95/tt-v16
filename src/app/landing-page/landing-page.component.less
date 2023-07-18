@@ -1,0 +1,141 @@
+.landing {
+
+    & .banner {
+      height: 100vh;
+      // max-height: 550px;
+      background: url('../../assets/images/landing_banner.png');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+  
+    & .banner-content {
+      position: absolute;
+      top: 25%;
+      width: 100%;
+  
+      button {
+        color: #F1F3F5;
+        background: #00b5ff;
+        font-size: 1.15em;
+        height: 4.5rem;
+        border: none;
+        border-radius: 5px;
+        width: 18rem;
+        transition: all ease-in-out 0.3s;
+        text-transform: uppercase;
+        font-family: "Cairo", "Helvetica", "Arial", sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+        letter-spacing: 0.67px;
+        line-height: initial;
+      }
+  
+      & .default-padding {
+        padding: 0 10%;
+        margin: 0 auto;
+  
+        @media (max-width: 1024px) {
+          padding-left: 7% !important;
+          padding-right: 7% !important;
+        }
+      }
+  
+      & p {
+        font-size: 2rem;
+        line-height: 3rem;
+        width: 80%;
+        color: #FFFFFF;
+      }
+  
+      & .section-title {
+        font-size: 5.1em;
+        margin: 0;
+        color: #F1F3F5;
+  
+      }
+    }
+  
+    .apps {
+      background: #303136;
+      padding-top: 4rem;
+      padding-bottom: 5rem;
+      text-align: center;
+  
+      & .image-container {
+        width: 600px;
+  
+        & img {
+          width: 100%;
+        }
+      }
+  
+      & .apps-content {
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        gap: 4rem;
+  
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 2rem;
+  
+          & p {
+            font-size: 15px;
+            font-weight: 300;
+            color: #F1F3F5;
+            margin-top: 0.4rem;
+          }
+  
+          & h3 {
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  
+    .plans {
+      background: none;
+    }
+  
+    .rails {
+      position: relative;
+      min-height: 650px;
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+  
+      h2,
+      p,
+      .tabs {
+        text-align: center;
+      }
+  
+      .tabs {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+  
+        span {
+          color: #6C6F7A;
+          padding: 0 0.5rem;
+          font-weight: 400;
+          cursor: pointer;
+  
+          &.active {
+            color: #00b5ff;
+          }
+        }
+      }
+    }
+  
+    p.sub-heading {
+      font-size: 17px;
+      color: #f4f4f4;
+      margin-top: 0.5rem;
+      font-weight: 300;
+    }
+  }

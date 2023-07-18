@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { SharedFunctionsService } from '../services/shared-functions.service';
 import { FormsModule } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 interface LoginForm {
   password: string;
   emailOrPhoneNumber: string;
@@ -25,7 +26,8 @@ export class SigninComponent implements OnInit {
   constructor(
     private _authService: DataAuthService,
     private _sharedFunctions: SharedFunctionsService,
-    public dialogRef: MatDialogRef<SigninComponent>
+    public dialogRef: MatDialogRef<SigninComponent>,
+    private _router:Router
   ) {}
 
   ngOnInit() {
@@ -55,6 +57,8 @@ export class SigninComponent implements OnInit {
     this._authService.login(this.loginRequest).subscribe(
       (response) => {
         this.dialogRef.close(true)
+        this._router.navigate(['/profiles']);
+
       },
       (error: any) => {
         console.log('error: login', error);
