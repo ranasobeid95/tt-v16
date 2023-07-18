@@ -5,10 +5,9 @@ import {
   RouterStateSnapshot,
 } from '@angular/router';
 import { DataAuthService } from '../services/auth.service';
-import { Observable, of, map } from 'rxjs';
-import { isPlatformBrowser } from '@angular/common';
 import { encryptor } from '../services/encryptor';
 import { environment } from 'src/environments/environment';
+import { SsrCookieService } from 'ngx-cookie-service-ssr';
 
 @Injectable({
   providedIn: 'root',
@@ -18,6 +17,7 @@ export class LandingPageAuthGuard {
   constructor(
     public authService: DataAuthService,
     public router: Router,
+    private _ssrCookieService: SsrCookieService,
     @Inject(PLATFORM_ID) platformId: Object
   ) {
     this.platformId = platformId;
@@ -26,19 +26,20 @@ export class LandingPageAuthGuard {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean {
-    if (
-      isPlatformBrowser(this.platformId) &&
-      JSON.parse(
-        encryptor.decryptData(
-          localStorage.getItem('userInfo'),
-          environment.ENC_DEC_KEY
-        )
-      ).tk === localStorage.getItem('TK')
-    ) {
-      this.router.navigate(['/home']);
-      return false;
-    } else {
-      return true;
+    const userInfoCookie = this._ssrCookieService.get('userInfo');
+    if (userInfoCookie) {
+      const encryptedUserInfo = encryptor.decryptData(
+        userInfoCookie,
+        environment.ENC_DEC_KEY
+      );
+      const parsedUserInfo = JSON.parse(encryptedUserInfo);
+      const tkCookie = this._ssrCookieService.get('tk');
+      if (userInfoCookie && parsedUserInfo.tk === tkCookie) {
+        this.router.navigate(['/home']);
+        return false;
+      }
     }
+
+    return true;
   }
 }
